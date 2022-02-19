@@ -1,32 +1,17 @@
-# avr-template
+# avr-rangefinder-peripheral
 
-This is a template repository for AVR C projects. It provides:
+Convert a [HC-SR04](https://www.adafruit.com/product/3942) or [compatible](https://www.adafruit.com/product/4007) ultrasonic rangefinder into an easy-to-use I2C perhipheral using an [ATtiny4313 microcontroller](https://www.microchip.com/en-us/product/ATtiny4313) for the I2C target[^1] device.
 
-- `Makefile` with good defaults for a project using:
-  - [ATtiny85](https://www.microchip.com/en-us/product/ATTINY85) microcontroller
-  - [SparkFun Tiny AVR Programmer](https://www.sparkfun.com/products/11801)
-  - macOS
-  - avr-gcc
-  - AVRDUDE
-- MIT License
-- This `README.md` that you should replace
-- Kinda sensible `.gitignore` for C
+Also provides a serial connection via 3.5mm audio jack for debugging, via the ATtiny4313's USART.
 
-## References
+## To Do
 
-- [*Make: AVR Programming*](https://amzn.to/3H1yxY2) by Elliot Williams
-  - Example code: <https://github.com/hexagon5un/AVR-Programming>
-- [Using the TinyProgrammer](http://highlowtech.org/?p=1801) by High-Low Tech Group, MIT Media Lab
-- [Using avr-gcc](https://gcc.gnu.org/wiki/avr-gcc#Using_avr-gcc)
-- [AVRDUDE documentation](https://www.nongnu.org/avrdude/user-manual/avrdude.html)
-- [100+ Projects on ATtiny13](https://blog.podkalicki.com/100-projects-on-attiny13/) by Łukasz Podkalicki
+- [ ] Get LED blinking
+- [ ] Get USART working for serial console debug output
+- [ ] Get rangefinder sending pulse
+- [ ] Receive echo
+- [ ] Compute distance
+- [ ] Output distance to serial console
+- [ ] Get I2C working in target mode
 
-## Install the dependencies
-
-In macOS, use Homebrew:
-
-```shell
-brew install avr-gcc avrdude
-```
-
-For any other OS, you're on your own, but SparkFun's [Tiny AVR Programmer Hookup Guide](https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide) should help a lot.
+[^1]: Language note on "controller" and "target": https://community.nxp.com/t5/Other-NXP-Products/Alternative-inclusive-terms-for-master-and-slave-in-I2S-I2C/td-p/1244999
