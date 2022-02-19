@@ -6,9 +6,9 @@ Also provides a serial connection via 3.5mm audio jack for debugging, via the AT
 
 ## To Do
 
-- [ ] Get LED blinking
-- [ ] Get USART working for serial console debug output
-- [ ] Get rangefinder sending pulse
+- [x] Get LED blinking
+- [x] Get USART working for serial console debug output
+- [x] Get rangefinder sending pulse
 - [ ] Receive echo
 - [ ] Compute distance
 - [ ] Output distance to serial console

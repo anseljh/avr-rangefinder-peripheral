@@ -4,11 +4,11 @@
 
 # TARGET is the first part of the main source file, everything before .c
 # If the main file is project.c, this should be `project`
-TARGET=blink2
+TARGET=rangefinder
 
 # Microprocessor type
 # for avrdude -p (partno) option
-MCU=attiny85
+MCU=attiny4313
 
 # Frequency; 1 Mhz default
 F_CPU=1000000
@@ -21,8 +21,8 @@ F_CPU=1000000
 #
 CC=avr-gcc
 OBJCOPY=avr-objcopy
-CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -I.
-SRCS=${TARGET}.c
+CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -I. -Iinclude
+SRCS=${TARGET}.c include/USART.c
 
 # avrdude config
 # avrdude options: https://www.nongnu.org/avrdude/user-manual/avrdude_3.html
